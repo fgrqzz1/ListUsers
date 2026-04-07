@@ -11,6 +11,7 @@ type UserHandler struct {
 }
 
 func (h *UserHandler) GetUsers(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Content-Type", "application/json")
 
 	users, err := h.Repo.GetUsers()
