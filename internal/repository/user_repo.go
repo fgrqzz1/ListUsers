@@ -5,7 +5,7 @@ import (
 )
 
 type UserRepository interface {
-	GetUsers([]models.User, error)
+	GetUsers() ([]models.User, error)
 }
 
 type InMemUserRepository struct{}
